@@ -99,7 +99,7 @@ const dropdownRef = ref(null)
 const isOpen = ref(false)
 
 const triggerClasses = computed(() => {
-  const base = 'inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2'
+  const base = 'inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2'
   return props.triggerClass ? `${base} ${props.triggerClass}` : base
 })
 
@@ -110,10 +110,10 @@ const menuClasses = computed(() => {
     center: 'left-1/2 transform -translate-x-1/2'
   }[props.align]
 
-  return `absolute z-10 mt-2 ${props.width} ${alignmentClass} rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`
+  return `absolute z-10 mt-2 ${props.width} ${alignmentClass} rounded-lg bg-white dark:bg-gray-800 shadow-lg ring-1 ring-black dark:ring-white ring-opacity-5 dark:ring-opacity-10 focus:outline-none`
 })
 
-const itemClasses = 'group flex w-full items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900'
+const itemClasses = 'group flex w-full items-center gap-3 px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-100'
 
 const toggle = () => {
   isOpen.value = !isOpen.value
