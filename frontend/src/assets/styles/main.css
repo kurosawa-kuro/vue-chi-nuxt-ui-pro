@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=fallback');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './css/additional-styles/flatpickr.css';
+@import './css/additional-styles/utility-patterns.css';
+
+@layer base {
+  :root {
+    --color-gray-50: 249 250 251;
+    --color-gray-100: 243 244 246;
+    --color-gray-200: 229 231 235;
+    --color-gray-300: 209 213 219;
+    --color-gray-400: 156 163 175;
+    --color-gray-500: 107 114 128;
+    --color-gray-600: 75 85 99;
+    --color-gray-700: 55 65 81;
+    --color-gray-800: 31 41 55;
+    --color-gray-900: 17 24 39;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: 'Public Sans', 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 border-transparent;
+  }
+
+  .form-input {
+    @apply block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm transition-colors;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 overflow-hidden shadow-sm rounded-xl border border-gray-200 dark:border-gray-700;
+  }
+
+  .elevated {
+    @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700;
+  }
+
+  .text-dimmed {
+    @apply text-gray-500 dark:text-gray-400;
+  }
+
+  .border-default {
+    @apply border-gray-200 dark:border-gray-700;
+  }
+
+  /* Dashboard specific components */
+  .dashboard-panel {
+    @apply bg-white dark:bg-gray-900 min-h-screen;
+  }
+
+  .dashboard-navbar {
+    @apply bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 py-3;
+  }
+
+  .dashboard-sidebar {
+    @apply bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700;
+  }
+
+  /* Sidebar expansion */
+  .sidebar-expanded {
+    /* Custom sidebar styles when expanded */
+  }
+
+  /* No scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    @apply transition-all duration-200 ease-in-out;
+  }
+}
