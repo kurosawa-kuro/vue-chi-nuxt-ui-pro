@@ -1,22 +1,21 @@
 <template>
-  <div class="dashboard-panel">
+  <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
     <div class="flex h-screen overflow-hidden">
       <!-- Sidebar -->
-      <Sidebar
-        :sidebarOpen="sidebarOpen"
-        @close-sidebar="sidebarOpen = false"
-        variant="v2"
-        class="dashboard-sidebar"
-      />
+      <div class="flex">
+        <ModernSidebar
+          v-model:open="sidebarOpen"
+          :collapsible="true"
+          :resizable="true"
+        />
+      </div>
 
       <!-- Content area -->
-      <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden bg-gray-50 dark:bg-gray-900">
-        <!-- Site header -->
-        <Header
-          :sidebarOpen="sidebarOpen"
+      <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+        <!-- Modern Header -->
+        <ModernHeader
+          :sidebar-open="sidebarOpen"
           @toggle-sidebar="sidebarOpen = !sidebarOpen"
-          variant="v2"
-          class="dashboard-navbar"
         />
 
         <!-- Main content -->
@@ -27,19 +26,21 @@
         </main>
       </div>
     </div>
+
+    <!-- Search Modal -->
+    <SearchModal />
+    
+    <!-- Notifications Slideover -->
+    <NotificationsSlider />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import Sidebar from '@/partials/SimpleSidebar.vue'
-import Header from '@/partials/SimpleHeader.vue'
+import ModernSidebar from '@/components/layout/ModernSidebar.vue'
+import ModernHeader from '@/components/layout/ModernHeader.vue'
+import SearchModal from '@/components/layout/SearchModal.vue'
+import NotificationsSlider from '@/components/layout/NotificationsSlider.vue'
 
 const sidebarOpen = ref(false)
-</script>
-
-<style scoped>
-.dashboard-panel {
-  @apply bg-gray-50 dark:bg-gray-900 min-h-screen;
-}
-</style> 
+</script> 

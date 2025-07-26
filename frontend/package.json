@@ -13,9 +13,13 @@
     "test:coverage": "vitest --coverage"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.23",
+    "@iconify-json/heroicons": "^1.2.2",
+    "@iconify-json/lucide": "^1.2.58",
     "@vueuse/core": "^13.5.0",
     "axios": "^1.7.9",
     "flatpickr": "^4.6.13",
+    "lucide-vue-next": "^0.525.0",
     "pinia": "^2.3.0",
     "vue": "^3.5.17",
     "vue-router": "^4.5.0"

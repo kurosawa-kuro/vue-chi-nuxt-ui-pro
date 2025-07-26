@@ -1,5 +1,5 @@
 <template>
-  <li class="pl-4 pr-3 py-2 rounded-lg mb-0.5 last:mb-0 bg-linear-to-r" :class="activeCondition && 'from-violet-500/[0.12] dark:from-violet-500/[0.24] to-violet-500/[0.04]'">
+  <li class="px-3 py-2 rounded-xl mb-1 last:mb-0 transition-colors" :class="activeCondition && 'bg-primary-50 dark:bg-primary-500/10 border border-primary-200 dark:border-primary-500/20'">
     <slot :handleClick="handleClick" :expanded="expanded" />
   </li>
 </template>

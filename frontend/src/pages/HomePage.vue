@@ -2,23 +2,39 @@
   <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
     <!-- Welcome Section -->
     <div class="mb-8">
-      <div class="bg-gradient-to-r from-violet-600 to-violet-500 rounded-xl p-8 shadow-lg">
-        <div class="text-center">
-          <h1 class="text-4xl font-bold text-white mb-4">
-            Welcome to Vue Admin Dashboard
-          </h1>
-          <p class="text-xl text-violet-100 mb-6">
-            A modern Vue 3 application with enterprise-grade components and beautiful design
-          </p>
-          <router-link
-            to="/hello-world"
-            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-violet-600 bg-white hover:bg-violet-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500 focus:ring-offset-violet-600 transition-colors duration-200"
-          >
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+      <div class="card bg-gradient-to-br from-primary-500 via-primary-600 to-primary-700 text-white p-8 shadow-xl border-0 overflow-hidden relative">
+        <div class="absolute inset-0 bg-black/10"></div>
+        <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+        <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
+        <div class="relative text-center">
+          <div class="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            Explore Hello World
-          </router-link>
+          </div>
+          <h1 class="text-4xl font-bold mb-4">
+            Welcome to Vue Chi Dashboard
+          </h1>
+          <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
+            A modern Vue 3 application with enterprise-grade components, beautiful design, and powerful backend integration
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <router-link
+              to="/hello-world"
+              class="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-xl hover:bg-white/95 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all duration-200 shadow-lg"
+            >
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              Try Hello World API
+            </router-link>
+            <button class="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/20 transition-all duration-200 border border-white/20">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              View Documentation
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -104,24 +120,51 @@
       </div>
     </div>
 
+    <!-- Placeholder Images Section -->
+    <PlaceholderImages />
+
     <!-- Stats Section -->
-    <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-        <div>
-          <div class="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1">100+</div>
-          <div class="text-sm text-dimmed">Components</div>
+    <div class="card p-8">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Built for Performance</h2>
+        <p class="text-dimmed">Powerful features and enterprise-grade capabilities</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+            </svg>
+          </div>
+          <div class="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">100+</div>
+          <div class="text-sm font-medium text-dimmed">Components</div>
         </div>
-        <div>
-          <div class="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-1">50+</div>
-          <div class="text-sm text-dimmed">Page Templates</div>
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+          </div>
+          <div class="text-3xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">50+</div>
+          <div class="text-sm font-medium text-dimmed">Page Templates</div>
         </div>
-        <div>
-          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">15+</div>
-          <div class="text-sm text-dimmed">Demo Apps</div>
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+            </svg>
+          </div>
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">15+</div>
+          <div class="text-sm font-medium text-dimmed">Demo Apps</div>
         </div>
-        <div>
-          <div class="text-3xl font-bold text-rose-600 dark:text-rose-400 mb-1">24/7</div>
-          <div class="text-sm text-dimmed">Support</div>
+        <div class="text-center group">
+          <div class="w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </div>
+          <div class="text-3xl font-bold text-rose-600 dark:text-rose-400 mb-2">24/7</div>
+          <div class="text-sm font-medium text-dimmed">Support</div>
         </div>
       </div>
     </div>
@@ -129,5 +172,5 @@
 </template>
 
 <script setup>
-// コンポーネントロジック
+import PlaceholderImages from '@/components/PlaceholderImages.vue'
 </script> 
